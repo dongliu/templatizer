@@ -251,7 +251,7 @@ module.exports = function (input, output, options, done) {
                 var commonJSOutput = "var jade = require('@lukekarrys/jade-runtime');\n\n" +
                     "var " + NAMESPACE + " = {};\n\n" +
                     compiledOutput + "\n\n" +
-                    "module.exports = " + NAMESPACE + ";\n";
+                    "export default " + NAMESPACE + ";\n";
 
                 if (output) {
                     fs.writeFile(output, commonJSOutput, function (fileErr) {
